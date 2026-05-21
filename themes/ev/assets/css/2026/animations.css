@@ -1,0 +1,388 @@
+@keyframes slideTop {
+    from {
+        transform: translateY(-100%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideBottom {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes backLeftToFrontCenter {
+  0% {
+    -webkit-transform: translateX(-2000px) scale(.7);
+    transform: translateX(-2000px) scale(.7);
+    opacity: .7
+  }
+  80% {
+    -webkit-transform: translateX(0) scale(.7);
+    transform: translateX(0) scale(.7);
+    opacity: .7
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+@keyframes backRightToFrontCenter {
+  0% {
+    -webkit-transform: translateX(2000px) scale(.7);
+    transform: translateX(2000px) scale(.7);
+    opacity: .7
+  }
+  80% {
+    -webkit-transform: translateX(0) scale(.7);
+    transform: translateX(0) scale(.7);
+    opacity: .7
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    /* Visibility on scroll */
+    .anim26-visible,
+    .anim26-whenVisible {
+        transition: opacity 1000ms;
+    }
+
+    .anim26-whenVisible {
+        animation-name: none !important;
+        opacity: 0;
+    }
+
+    .anim26-visible {
+        opacity: 1;
+    }
+
+    /*
+    If item is translated and hidden from its box,
+    detect untransformed outer on scroll and trigger
+    item animation then.
+    */
+
+    .anim26-parentVisible > *,
+    .anim26-parentNotVisible > * {
+        transition: opacity 1000ms;
+    }
+
+    .anim26-parentNotVisible > * {
+        animation-name: none !important;
+        opacity: 0;
+    }
+
+    .anim26-parentVisible > * {
+        opacity: 1;
+    }
+
+    /*
+        Animation presets
+    */
+
+    .anim26-preset-fadeIn {
+        /* Estado inicial */ 
+        opacity: 0;
+
+        animation-name: fade;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-fadeOut {
+        /* Estado inicial */ 
+        opacity: 1;
+
+        animation-name: fade;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-slideFromTop {
+        /* Estado inicial */ 
+        transform: translateY(-100%);
+
+        animation-name: slideTop;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-slideToTop {
+        /* Estado inicial */ 
+        transform: translateY(0%);
+
+        animation-name: slideTop;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-slideFromBottom {
+        /* Estado inicial */ 
+        transform: translateY(100%);
+
+        animation-name: slideBottom;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-slideToBottom {
+        /* Estado inicial */ 
+        transform: translateY(0%);
+
+        animation-name: slideBottom;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-slideFromLeft {
+        /* Estado inicial */ 
+        transform: translateX(100%);
+
+        animation-name: slideLeft;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-pulse {
+        /* Estado inicial */ 
+        transform: scaleX(1);
+
+        animation-name: pulse;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-backLeftToFrontCenter {
+        /* Estado inicial */ 
+        transform: translateX(-2000px) scale(.7);
+
+        animation-name: backLeftToFrontCenter;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    .anim26-preset-backRightToFrontCenter {
+        /* Estado inicial */ 
+        transform: translateX(2000px) scale(.7);
+
+        animation-name: backRightToFrontCenter;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+}
+
+/*
+    Reduce
+*/
+
+@media (prefers-reduced-motion: reduce) {
+    .anim26-preset-slideFromTop,
+    .anim26-preset-slideFromBottom {
+        transform: translateY(0%);
+    }
+
+    .anim26-preset-slideToTop {
+        transform: translateY(-100%);
+    }
+
+    .anim26-preset-slideToBottom {
+        transform: translateY(100%);
+    }
+
+    .anim26-preset-fadeIn {
+        opacity: 1;
+    }
+
+    .anim26-preset-fadeOut {
+        opacity: 0;
+    }
+
+    .anim26-preset-pulse {
+        transform: scale3d(1, 1, 1);
+    }
+    
+    .anim26-preset-backLeftToFrontCenter, 
+    .anim26-preset-backRightToFrontCenter {
+        transform: scale(1);
+    }
+}
+
+/*
+    Animation duration
+*/
+
+.anim26-duracao-200 {
+    animation-duration: 200ms;
+}
+
+.anim26-duracao-250 {
+    animation-duration: 250ms;
+}
+
+.anim26-duracao-300 {
+    animation-duration: 300ms;
+}
+
+.anim26-duracao-400 {
+    animation-duration: 400ms;
+}
+
+.anim26-duracao-500 {
+    animation-duration: 500ms;
+}
+
+.anim26-duracao-750 {
+    animation-duration: 750ms;
+}
+
+.anim26-duracao-1000 {
+    animation-duration: 1000ms;
+}
+
+.anim26-duracao-2000 {
+    animation-duration: 2000ms;
+}
+
+/*
+    Animation delay (with transition delay for the whenVisible opacity)
+*/
+
+.anim26-delay-100 {
+    animation-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.anim26-delay-200 {
+    animation-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.anim26-delay-250 {
+    animation-delay: 250ms;
+    transition-delay: 250ms;
+}
+
+.anim26-delay-300 {
+    animation-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.anim26-delay-400 {
+    animation-delay: 400ms;
+    transition-delay: 400ms;
+}
+
+.anim26-delay-500 {
+    animation-delay: 500ms;
+    transition-delay: 500ms;
+}
+
+.anim26-delay-750 {
+    animation-delay: 750ms;
+    transition-delay: 750ms;
+}
+
+.anim26-delay-1000 {
+    animation-delay: 1000ms;
+    transition-delay: 1000ms;
+}
+
+.anim26-delay-2000 {
+    animation-delay: 2000ms;
+    transition-delay: 2000ms;
+}
+
+
+/*
+    Animation ease
+*/
+
+.anim26-ease-in {
+    animation-timing-function: ease-in;
+}
+
+.anim26-ease-out {
+    animation-timing-function: ease-out;
+}
+
+.anim26-ease-inout {
+    animation-timing-function: ease-in-out;
+}
+
+.anim26-ease-drawer {
+    animation-timing-function: cubic-bezier(0.76, 0.01, 0.3, 1.04);
+}
+
+.anim26-ease-light {
+    animation-timing-function: cubic-bezier(0, .72, .51, 1);
+}
+
+/*
+    Transition duration
+*/
+
+.anim26-transicao-200 {
+    transition-duration: 200ms;
+}
+
+.anim26-transicao-250 {
+    transition-duration: 250ms;
+}
+
+.anim26-transicao-300 {
+    transition-duration: 300ms;
+}
+
+.anim26-transicao-400 {
+    transition-duration: 400ms;
+}
+
+.anim26-transicao-500 {
+    transition-duration: 500ms;
+}
+
+.anim26-transicao-750 {
+    transition-duration: 750ms;
+}
