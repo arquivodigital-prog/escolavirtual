@@ -1,0 +1,252 @@
+/* Renato Alves - 17-10-2024 */
+/* Default Buttons */
+
+
+/* Home Ev */
+
+.btWhite {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #ffffff;
+    padding: 0;
+    background: #ffffff;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.btRed {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #CC0001;
+    padding: 0;
+    background: #CC0001;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #FFFFFF; text-decoration: none;}
+}
+
+.btBlack {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 40px;
+    border: 0;
+    margin: 15px;
+    background: #000000;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #FFFFFF; text-decoration: none;}
+}
+
+.btBlue {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #063A98;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #31FEE7;
+    padding: 0;
+    background: #31FEE7;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #063A98; text-decoration: none;}
+}
+
+.btBlueTutorial {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #0088D2;
+    padding: 0;
+    background: #0088D2;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #0088D2; text-decoration: none;}
+}
+
+.btAniversario {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #04ADEF;
+    padding: 0;
+    background: #04ADEF;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #ffffff; text-decoration: none;}
+}
+
+
+.btPersonalizado {
+    width: 100%;
+    max-width: 210px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: #CC0001;
+    padding: 0;
+    background: #CC0001;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #fff; text-decoration: none;}
+}
+
+.btnTeste{
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    padding: 0;
+    margin: 15px;
+    background: #CC0001;
+    opacity: 1;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #fff; text-decoration: none;}
+}
+
+.btLine {
+    width: 100%;
+    max-width: 188px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: #1C1C1A;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: 2px solid #000000;
+    padding: 0;
+    opacity: 1;
+    margin: 15px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+        transition: all 0.3s ease-out;
+    }
+    a { color: #1C1C1A; text-decoration: none;}
+}
+
+
+/* Iphone  11 PRO */
+@media screen and (max-width: 415px) {
+    .btPersonalizado{
+        max-width: 220px;
+    }
+}
