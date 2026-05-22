@@ -1,0 +1,185 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-PT" class="login-pf">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0"/>
+
+    <title>        Entrar em Escola Virtual
+</title>
+
+    <link rel="icon" href="/auth/resources/1kt27/login/escolavirtual/img/favicon.ico" />
+            <link href="/auth/resources/1kt27/login/escolavirtual/node_modules/patternfly/dist/css/patternfly.css" rel="stylesheet" />
+            <link href="/auth/resources/1kt27/login/escolavirtual/node_modules/patternfly/dist/css/patternfly-additions.css" rel="stylesheet" />
+            <link href="/auth/resources/1kt27/login/escolavirtual/css/login.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="/auth/resources/1kt27/login/escolavirtual/css/ev-app-web.css">
+
+    <link href="/auth/resources/1kt27/login/escolavirtual/css/components.css" rel="stylesheet" />
+    <script src="//cdn.escolavirtual.pt/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="login-pf-page">
+        <div class="login-pf-container">
+            <div class="card-pf login-pf-accounts" role="main" style="position:relative;">
+            <div class="logoDiv" style="width:100%;">
+                <a href="https://www.escolavirtual.pt/" target="_BLANK" aria-label="Página principal da Escola Virtual">
+                    <img id="logo" src="/auth/resources/1kt27/login/escolavirtual/img/logoEV.svg" alt="" />
+                </a>
+            </div>
+
+            <div class="login-pf-header">
+
+                <h1 id="kc-page-title">        <span class="sr-only">Entrar em Escola Virtual</span>
+</h1>
+            </div>
+
+            <div id="kc-content">
+                <div id="kc-content-wrapper">
+    <script src="//cdn.escolavirtual.pt/jquery/1.12.0/jquery.min.js"></script>
+
+    <script>
+        function inIframe () {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+        $(document).ready(function() {
+            if(inIframe()) {
+                $('#kc-form-wrapper').removeClass();
+                $('#kc-registration').remove();
+                $('.loginHeader').remove();
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const noregister = urlParams.get('noregister');
+            if (noregister === '1' || sessionStorage.getItem("noregister")) {
+                sessionStorage.setItem("noregister", "1");
+                $('#kc-registration').css('display','none');
+                $('.login-pf-page .login-pf-accounts').css('max-width','26rem');
+                $('.login-pf-page .login-pf-social-section').css('max-width','100%');
+                $('.login-pf-social-section').css('width','100%');
+                $('.login-pf-page .login-pf-social-section:first-of-type').css('border','none');
+                $('.login-pf-page .login-pf-settings').css('display','none');
+                $('.loginHeader').css('display','none');
+                $('.login-pf-page .login-pf-social-section:first-of-type').css('padding-right','0px');
+                $('.logoDiv img').unwrap();
+            }
+        });
+    </script>
+
+    <div id="kc-form" class="row">
+        <div id="notInIframe">
+            <div id="kc-form-wrapper" class="col-xs-12 col-sm-6 login-pf-social-section">
+                <h2 class="loginHeader">Já tem conta? Inicie sessão.</h2>
+                    <form id="kc-form-login" onsubmit="login.disabled=true;return true;" action="https://iam.escolavirtual.pt/auth/realms/EV/login-actions/authenticate?session_code=CIo49sfU1NWa2NqQv5oKxhcC2XhnbEnALKWjNpHmgAg&amp;execution=bcd59f3e-acb1-4b83-aed8-5a49d8d85721&amp;client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0" method="post"
+                         >
+
+                        <div class="form-group input-default-form">
+                            <label for="username" class="input-default-label">
+                                    Utilizador
+                                <span class="field-star" aria-hidden="true">*</span>
+                            </label>
+
+                            <div class="input-default-content">
+                                <input id="username" name="username" class="input-default" type="text" value=""   autofocus autocomplete="username" required aria-required="true" title="" />
+                            </div>
+                            <div id="username-error" class="kc-error-message" role="alert"></div>
+                        </div>
+
+                        <div class="form-group input-default-form">
+                            <label for="password" class="input-default-label">
+                                Password
+                                <span class="field-star" aria-hidden="true">*</span>
+                            </label>
+
+                            <div class="input-default-content">
+                                <input id="password" name="password" class="input-default" type="password" required aria-required="true" autocomplete="off" title=""  />
+                                <button id="password-icon" class="show-password-icon-btn" style="display:none;" type="button"
+                                      aria-controls="password" aria-label="Mostrar password">
+                                      <span class="show-password-icon fa fa-eye" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div id="password-error" class="kc-error-message" role="alert"></div>
+                        </div>
+
+                        <div class="login-pf-settings">
+                            <div class="option-default-container">
+                                <input id="rememberMe" name="rememberMe" type="checkbox" />
+                                <label for="rememberMe" class="option-default-label">Memorizar dados</label>
+                            </div>
+
+                                <a href="/auth/realms/EV/login-actions/reset-credentials?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0" class="recover-access-data link-default">Não sei a password</a>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="kc-login" name="login" class="button-default button-primary" type="submit" value="Entrar"/>
+                        </div>
+                    </form>
+            </div>
+
+                <div id="kc-registration" class="col-xs-12 col-sm-6 login-pf-social-section">
+                    <h2 class="loginHeader">Não tem conta? Registe-se.</h2>
+
+                    <div class="registerDiv form-group">
+                        <a id="registerButtonDiv" href="/auth/realms/EV/login-actions/registration?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0" class="button-default button-secondary">
+                            Criar conta
+                        </a>
+                    </div>
+
+                    <h2 class="loginHeader social-header">Entrar com outras contas</h2>
+                    <div id="socialLogin">
+                                <span class="login-pf-social-link facebook">
+                                    <a href="/auth/realms/EV/broker/facebook/login?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0&amp;session_code=CIo49sfU1NWa2NqQv5oKxhcC2XhnbEnALKWjNpHmgAg" id="zocial-facebook" class="zocial" aria-label="facebook">
+                                        <div class="socialWrapper">
+                                            <img class="socialLogin" src="/auth/resources/1kt27/login/escolavirtual/img/facebook.png" alt="">
+                                        </div>
+                                    </a>
+                                </span>
+                                <span class="login-pf-social-link google">
+                                    <a href="/auth/realms/EV/broker/google/login?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0&amp;session_code=CIo49sfU1NWa2NqQv5oKxhcC2XhnbEnALKWjNpHmgAg" id="zocial-google" class="zocial" aria-label="google">
+                                        <div class="socialWrapper">
+                                            <img class="socialLogin" src="/auth/resources/1kt27/login/escolavirtual/img/google.png" alt="">
+                                        </div>
+                                    </a>
+                                </span>
+                                <span class="login-pf-social-link microsoft">
+                                    <a href="/auth/realms/EV/broker/microsoft/login?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0&amp;session_code=CIo49sfU1NWa2NqQv5oKxhcC2XhnbEnALKWjNpHmgAg" id="zocial-microsoft" class="zocial" aria-label="microsoft">
+                                        <div class="socialWrapper">
+                                            <img class="socialLogin" src="/auth/resources/1kt27/login/escolavirtual/img/microsoft.png" alt="">
+                                        </div>
+                                    </a>
+                                </span>
+                                <span class="login-pf-social-link apple">
+                                    <a href="/auth/realms/EV/broker/apple/login?client_id=ev-app-web&amp;tab_id=7suqf428DLY&amp;client_data=eyJydSI6Imh0dHBzOi8vYXBwLmVzY29sYXZpcnR1YWwucHQvcG9ydGFsL2F1dGgvY2FsbGJhY2siLCJydCI6ImNvZGUiLCJzdCI6ImQ0ZTdlNDZlZjFiNGZkMjQ1ZTY5NjBjM2JhM2NkYmMwIn0&amp;session_code=CIo49sfU1NWa2NqQv5oKxhcC2XhnbEnALKWjNpHmgAg" id="zocial-apple" class="zocial" aria-label="apple">
+                                        <div class="socialWrapper">
+                                            <img class="socialLogin" src="/auth/resources/1kt27/login/escolavirtual/img/apple.png" alt="">
+                                        </div>
+                                    </a>
+                                </span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+                        <div id="kc-info" class="login-pf-signup">
+                            <div id="kc-info-wrapper" class="">
+        
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+  	<script src="/auth/resources/1kt27/login/escolavirtual/js/mhck-v2.js?v=12" type="text/javascript"></script>
+</body>
+</html>
